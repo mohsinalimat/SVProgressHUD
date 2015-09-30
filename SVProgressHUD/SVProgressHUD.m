@@ -496,7 +496,8 @@ static const CGFloat SVProgressHUDParallaxDepthPoints = 10;
 
 - (void)moveToPoint:(CGPoint)newCenter rotateAngle:(CGFloat)angle {
     self.hudView.transform = CGAffineTransformMakeRotation(angle);
-    self.hudView.center = CGPointMake(newCenter.x + self.offsetFromCenter.horizontal, newCenter.y + self.offsetFromCenter.vertical);
+//    self.hudView.center = CGPointMake(newCenter.x + self.offsetFromCenter.horizontal, newCenter.y + self.offsetFromCenter.vertical);
+    self.hudView.center = CGPointMake(([UIScreen mainScreen].bounds.size.width)/2, ([UIScreen mainScreen].bounds.size.height)/2);
 }
 
 - (void)overlayViewDidReceiveTouchEvent:(id)sender forEvent:(UIEvent *)event {
